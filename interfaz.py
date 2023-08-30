@@ -10,7 +10,10 @@ def obtenerValor():
     print(entrada)
     for error in data['errores']:
         if error['error'] == entrada:
-            print("Error Encontrado")
+            descripcion.config(text=error['desc'])
+            break
+        else:
+            descripcion.config(text="")
 
 
 #Crear la ventana
